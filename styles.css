@@ -1,0 +1,377 @@
+/* North Star Bakery - Touchstone 3 design system
+   Colors (4): navy #1b2a49, cream #fdf6e9, gold #e3a83b, white #ffffff
+   Fonts (2): Georgia (headings), Helvetica Neue / Arial (body)
+   Approach: mobile-first; the media query at the bottom adds the wider layout. */
+
+:root {
+    --navy: #1b2a49;
+    --cream: #fdf6e9;
+    --gold: #e3a83b;
+    --white: #ffffff;
+
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: "Helvetica Neue", Arial, sans-serif;
+
+    --space: 1rem;
+}
+
+/* ---------- Base (mobile) ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cream);
+    color: var(--navy);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2 {
+    font-family: var(--font-heading);
+    line-height: 1.25;
+    margin: 0 0 0.75rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.35rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 3px solid var(--gold);
+}
+
+p {
+    margin: 0 0 0.75rem;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space);
+    padding: var(--space);
+    background-color: var(--navy);
+    color: var(--cream);
+    text-align: center;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    color: var(--cream);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+    background-color: var(--gold);
+    color: var(--navy);
+}
+
+/* ---------- Main content ---------- */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space);
+}
+
+main section {
+    flex: 1 1 auto;
+    padding: var(--space);
+    background-color: var(--white);
+    border-radius: 6px;
+    border-left: 6px solid var(--gold);
+}
+
+main section ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+main section li {
+    margin-bottom: 0.5rem;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+audio {
+    width: 100%;
+}
+
+/* ---------- Form ---------- */
+form fieldset {
+    margin: 0;
+    padding: var(--space);
+    border: 2px solid var(--navy);
+    border-radius: 6px;
+}
+
+form legend {
+    padding: 0 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: bold;
+}
+
+form fieldset > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: var(--space);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid var(--navy);
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--navy);
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus,
+form button:focus,
+nav a:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+form button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--navy);
+    border-radius: 4px;
+    background-color: var(--gold);
+    color: var(--navy);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    padding: var(--space);
+    background-color: var(--navy);
+    color: var(--cream);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ---------- Larger screens (tablet and up) ---------- */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+        padding: var(--space) 2rem;
+    }
+
+    header img {
+        width: 96px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.25rem;
+    }
+
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    /* Two columns: each section grows from a 320px base */
+    main section {
+        flex: 1 1 320px;
+        padding: 1.5rem;
+    }
+
+    /* The opening section on each page spans the full width */
+    main section:first-child {
+        flex-basis: 100%;
+    }
+}
+
+/* ---------- Touchstone 4: interactive feature and form feedback ---------- */
+
+/* Product list items: name/price on the left, Add to list button on the right */
+main section li[data-id] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.fav-btn,
+#clear-favorites {
+    padding: 0.4rem 0.9rem;
+    border: 2px solid var(--navy);
+    border-radius: 4px;
+    background-color: var(--gold);
+    color: var(--navy);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fav-btn[aria-pressed="true"] {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+.fav-btn:hover,
+#clear-favorites:hover {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+.fav-btn:focus,
+#clear-favorites:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+#favorites-summary {
+    font-weight: bold;
+}
+
+#favorites-section a {
+    font-weight: bold;
+    color: var(--navy);
+}
+
+/* Validation feedback: no extra color, so it uses a heavier border, bold text, and an "Error:" prefix */
+form .error {
+    font-weight: bold;
+    border-left: 4px solid var(--gold);
+    padding-left: 0.5rem;
+}
+
+form .invalid {
+    border-width: 4px;
+}
+
+form .note {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.status {
+    margin-top: var(--space);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.status-error {
+    border: 2px dashed var(--navy);
+}
+
+.status-success {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    #favorites-section {
+        flex-basis: 100%;
+    }
+}
+
+/* Menu lists with buttons: flex items lose bullets, so these lists use dividers instead */
+main section ul:has(li[data-id]) {
+    padding-left: 0;
+    list-style: none;
+}
+
+main section li[data-id] {
+    margin-bottom: 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--cream);
+}
+
+#favorites-section p:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}

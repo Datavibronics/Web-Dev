@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery - Our Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="bakery-logo.png" alt="North Star Bakery golden compass logo">
+        <h1>Our Handcrafted Menu &amp; Products</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" aria-current="page">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact &amp; Pre-orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Explore Our Categories</h2>
+            <p>Every item at North Star Bakery is handcrafted with love, tradition, and superior ingredients. Browse our core categories below and stop by or pre-order ahead!</p>
+            <img src="bakery-bread.jpg" alt="Close-up of freshly sliced artisan whole grain bread loaves showcasing soft crumb and crust">
+        </section>
+        <section id="favorites-section">
+            <h2>My Pre-order List</h2>
+            <p id="favorites-empty">Your list is empty. Choose &ldquo;Add to list&rdquo; next to any bread or pastry and it will be saved here, even if you leave the page.</p>
+            <ul id="favorites-list"></ul>
+            <p id="favorites-summary" hidden></p>
+            <p>
+                <button type="button" id="clear-favorites" hidden>Clear list</button>
+                <a href="contact.html">Continue to the pre-order form</a>
+            </p>
+        </section>
+        <section>
+            <h2>Artisan Breads</h2>
+            <p>Fermented slowly over 36 hours for maximum flavor, crunch, and digestibility.</p>
+            <ul>
+                <li data-id="country-sourdough">Country Sourdough Loaf — $7.50</li>
+                <li data-id="seeded-multigrain">Seeded Multigrain Boule — $8.00</li>
+                <li data-id="rosemary-garlic">Rosemary Garlic Loaf — $8.50</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Delicate Pastries</h2>
+            <p>Made with imported European butter for unmatched flaky layers.</p>
+            <ul>
+                <li data-id="butter-croissant">All-Butter Croissant — $4.00</li>
+                <li data-id="almond-croissant">Almond Frangipane Croissant — $5.00</li>
+                <li data-id="berry-danish">Seasonal Berry Danish — $4.50</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Custom Celebration Cakes</h2>
+            <p>Designed for birthdays, anniversaries, and family gatherings (requires 48 hours notice).</p>
+            <ul>
+                <li>Vanilla Bean Layer Cake (6-inch to 10-inch) — $45.00 - $75.00</li>
+                <li>Dark Chocolate Ganache Cake — $50.00 - $85.00</li>
+                <li>Lemon Raspberry Torte — $48.00 - $80.00</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

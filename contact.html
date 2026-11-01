@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery - Contact &amp; Pre-orders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="bakery-logo.png" alt="North Star Bakery golden compass logo">
+        <h1>Contact &amp; Pre-Order Form</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" aria-current="page">Contact &amp; Pre-orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Get in Touch or Reserve Your Fresh Bakes</h2>
+            <p>Have a question or want to secure your favorite sourdough loaf before we sell out? Fill out the form below!</p>
+            <form action="#" method="POST" novalidate>
+                <fieldset>
+                    <legend>Customer &amp; Pre-Order Details</legend>
+                    <div>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <label for="pickup-date">Requested Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickup_date" required>
+                    </div>
+                    <div>
+                        <label for="request-type">Request Type:</label>
+                        <select id="request-type" name="request_type" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="pre-order">Pre-Order</option>
+                            <option value="general-question">General Question</option>
+                            <option value="catering">Catering Inquiry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="item-details">Item Details &amp; Quantities:</label>
+                        <textarea id="item-details" name="item_details" rows="4" required placeholder="List items and quantities you would like to reserve"></textarea>
+                    </div>
+                    <div>
+                        <label for="allergy-notes">Allergy Notes (if applicable):</label>
+                        <input type="text" id="allergy-notes" name="allergy_notes" placeholder="e.g., nut allergy, gluten-free concerns">
+                    </div>
+                    <div>
+                        <button type="submit">Submit Request</button>
+                    </div>
+                </fieldset>
+                <div id="form-status" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+        <section>
+            <h2>Visit Us</h2>
+            <p><strong>Address:</strong> 124 Baker Street, Downtown</p>
+            <p><strong>Hours:</strong> Tuesday – Sunday: 6:00 AM – 3:00 PM</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
